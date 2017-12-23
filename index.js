@@ -164,6 +164,10 @@ LightwaveRF.prototype.turnDeviceOn = function(roomId, deviceId, callback) {
 	this.exec("!R" + roomId + "D" + deviceId + "F" + state + "|\0", callback);
 }
 
+LightwaveRF.prototype.turnMoodOn = function(roomId, moodId, callback) {
+	this.exec("!R" + roomId + "FmP" + moodId + "|\0", callback); 
+}
+
 /**
  * Open a device
  *
